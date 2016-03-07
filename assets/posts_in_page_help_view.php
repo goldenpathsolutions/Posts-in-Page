@@ -28,7 +28,8 @@
 					<li><code>[ic_add_posts tax='taxonomy' term='term']</code> - <?php _e( 'limit posts to those that exist in a taxonomy and have a specific term.  Both are required for either one to work', 'posts-in-page' ); ?></li>
 					<li><code>[ic_add_posts template='template-in-theme-dir.php']</code> - <?php _e( 'In case you want to style your markup, add meta data, etc.  Each shortcode can reference a different template.  These templates must exist in the theme directory.', 'posts-in-page' ); ?></li>
 					<li><code>[ic_add_posts ignore_sticky_posts='no']</code> - <?php _e( "Show sticky posts too (they're ignored by default)", 'posts-in-page' ); ?></li>
-					<li><code>[ic_add_posts paginate='yes']</code> - <?php _e( 'use pagination links (off by default)', 'posts-in-page' ); ?></li>
+                                        <li><code>[id_add_posts post_status='publish,pending,draft,auto-draft,future,private,inherit,trash']</code> - <?php _e("Comma separated list of post statuses you want to include.  Lists only \"Publish\" status by default.");?>
+                                        <li><code>[ic_add_posts paginate='yes']</code> - <?php _e( 'use pagination links (off by default)', 'posts-in-page' ); ?></li>
 					<li><code>[ic_add_posts offset='3']</code> - <?php _e( 'Display posts from the 4th one', 'posts-in-page' ); ?></li>
 					<li><code>[ic_add_posts Date='today']</code> - <?php _e( "Show's post associated (published) on specified date period, today, 'today-1' show's posts published yesterday, 'today-2' shows posts published two days ago, etc. Also 'week(-n)' shows posts n weeks ago. Also available 'month(-n)' and 'year(-n)'", 'posts-in-page' ); ?></li>
 					<li><code>[ic_add_posts exclude_ids='25,15']</code> - <?php _e( 'exclude by post ID one or more.', 'posts-in-page' ); ?></li>

@@ -156,7 +156,13 @@ class ICPagePosts {
 
 		$this->args['ignore_sticky_posts'] = isset( $this->args['ignore_sticky_posts'] ) ? $this->shortcode_bool( $this->args['ignore_sticky_posts'] ) : true;
 
-		if ( isset( $this->args['more_tag'] ) ) {
+		// set different post statuses to include via shortcode
+                if ( isset( $atts['post_status'] ) ){
+                    $this->args['post_status'] = explode(',', $atts['post_status']);
+                }
+                
+                
+                if ( isset( $this->args['more_tag'] ) ) {
 			add_filter( 'excerpt_more', array( &$this, 'custom_excerpt_more' ), 1 );
 		}
 
